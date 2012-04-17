@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.drawable.Drawable;
 
 import com.google.android.maps.ItemizedOverlay;
@@ -41,7 +42,15 @@ public class CustomItemizedOverlay extends ItemizedOverlay<OverlayItem> {
         AlertDialog.Builder dialog = new AlertDialog.Builder(context);
         dialog.setTitle(item.getTitle());
         dialog.setMessage(item.getSnippet());
+        dialog.setPositiveButton("OK", new DialogInterface.OnClickListener()
+        {
+            public void onClick(DialogInterface dialog, int id)
+            {
+                dialog.dismiss();
+            }
+        });
         dialog.show();
+        
         return true;
     }
 
