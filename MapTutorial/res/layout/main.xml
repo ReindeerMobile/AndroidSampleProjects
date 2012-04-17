@@ -3,14 +3,12 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
-
     <com.google.android.maps.MapView
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/map_view"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:apiKey="0D8J1kONohe73cnHrln8DayqPURCNFpwTQNZIxg"
+        android:apiKey="@string/apikey"
         android:clickable="true"
         android:enabled="true" />
-
 </RelativeLayout>
